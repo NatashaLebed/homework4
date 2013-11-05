@@ -1,0 +1,11 @@
+_all:
+    pattern:  /all
+    defaults: { _controller: AcmeDemoBundle:Country:all }
+
+_ukraine:
+    pattern:  /ukraine
+    defaults: { _controller: AcmeDemoBundle:Country:ukraine }
+
+_estonia:
+    pattern:  /estonia
+    defaults: { _controller: AcmeDemoBundle:Country:estonia }
