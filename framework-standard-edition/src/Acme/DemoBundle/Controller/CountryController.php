@@ -48,6 +48,9 @@ class CountryController extends Controller
         $name = ucfirst(substr($uri,1,strlen($uri)));
 
         return $this->render('AcmeDemoBundle:Country:estonia.html.twig',
-            array('name' => $name));
+            array('name' => $name,
+                  'population' => '1.2',
+                  'area' => '45 000',
+                  'president' => 'Tomas Hendric',));
     }
 }
