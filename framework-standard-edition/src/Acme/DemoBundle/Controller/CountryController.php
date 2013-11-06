@@ -45,7 +45,7 @@ class CountryController extends Controller
         //return $this->render('AcmeDemoBundle:Countries:estonia.html.twig');
         $request = Request::createFromGlobals();
         $uri = $request->getPathInfo();
-        $name = ucfirst(substr($uri,1,7));
+        $name = ucfirst(substr($uri,1,strlen($uri)));
 
         return $this->render('AcmeDemoBundle:Country:estonia.html.twig',
             array('name' => $name));
