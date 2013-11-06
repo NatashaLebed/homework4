@@ -43,11 +43,11 @@ class CountryController extends Controller
          *
          */
         //return $this->render('AcmeDemoBundle:Countries:estonia.html.twig');
-        $about = '1,2 mln, 45 000 km, Tomas Hendrik';
-
         $request = Request::createFromGlobals();
-        $name = $request->getPathInfo();
+        $uri = $request->getPathInfo();
+        $name = ucfirst(substr($uri,1,7));
+
         return $this->render('AcmeDemoBundle:Country:estonia.html.twig',
-            array('about' => $about, 'name' => $name));
+            array('name' => $name));
     }
 }
